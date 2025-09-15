@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es-ve">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="Farmacia especializada en medicamentos, productos de cuidado personal y asesoramiento farmacéutico profesional">
+    <meta name="keywords" content="farmacia, medicamentos, salud, cuidado personal, productos médicos">
+    <meta name="author" content="Yampiero Mujica">
+    <meta name="robots" content="index, follow">
+    <title>Farmacia Salud - Tu bienestar es nuestra prioridad</title>
+    
+      <!-- Apple -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Farmacia">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <link rel="apple-touch-icon" href="/aldia.png" sizes="180x180">
+  <link rel="apple-touch-startup-image" href="/aldia.png">
+
+ 
+  <meta name="title" content="Farmacia - Carrito de compra.">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://farmacia.vercel.app">
+  <meta property="og:title" content="Farmacia">
+  <meta property="og:description" content="Cuidamos tu salud en la ciudad de Puerto Cabello .">
+  <meta property="og:image" content="https://farmacia.vercel.app/farmacia.jpg">
+
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="farmacia">
+  <meta name="twitter:description" content="Cuidamos tu salud en la ciudad de Puerto Cabello .">
+  <meta name="twitter:image" content="https://farmacia.vercel.app/farmacia.png">
+  
+      <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💊</text></svg>">
+    
+    <!-- Preconexión para fuentes y recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuente Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="w3schools.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- JavaScript -->
+    <script defer src="main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">💊</span>
+                <span>Farmacia Salud</span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            
+            <nav id="main-nav">
+                <button class="close-menu" aria-label="Cerrar menú">×</button>
+                <ul class="nav-list">
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="carrito.html" id="cart-link">Carrito (<span id="header-cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Botón flotante del carrito -->
+    <div class="floating-cart" onclick="redirectToCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <h1>Tu salud es nuestra prioridad</h1>
+                <p>En Farmacia Salud encontrarás los mejores productos y el asesoramiento profesional que necesitas para cuidar de ti y tu familia.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn">Contactar ahora</a>
+                    <a href="#productos" class="btn btn-secondary">Ver productos</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sobre Nosotros -->
+        <section id="nosotros" class="about">
+            <div class="container">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <div class="about-content">
+                    <div>
+                        <h3>Más de 20 años cuidando de tu salud</h3>
+                        <p>En Farmacia Salud nos enorgullece servir a nuestra comunidad desde hace más de dos décadas. Nuestro equipo de farmacéuticos altamente capacitados está comprometido con tu bienestar.</p>
+                        <p>Ofrecemos no solo medicamentos, sino también consejos profesionales y un trato humano que marca la diferencia.</p>
+                        <p>Nuestra misión es ser tu aliado en salud, proporcionándote productos de calidad y el conocimiento necesario para que tomes las mejores decisiones para tu cuidado.</p>
+                    </div>
+                    <div class="about-image w3-card-4"><i class="fas fa-hospital"></i></div>
+                </div>
+                <div class="w3-center" style="margin-top: 2rem;">
+                    <a href="#contacto" class="btn">Contactar ahora</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Servicios -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card w3-card-4">
+                        <div class="service-icon"><i class="fas fa-pills"></i></div>
+                        <h3>Venta de Medicamentos</h3>
+                        <p>Amplio stock de medicamentos con y sin receta, siempre al mejor precio.</p>
+                    </div>
+                    
+                    <div class="service-card w3-card-4">
+                        <div class="service-icon"><i class="fas fa-user-md"></i></div>
+                        <h3>Asesoramiento Farmacéutico</h3>
+                        <p>Nuestros farmacéuticos te brindarán el mejor consejo para tu salud.</p>
+                    </div>
+                    
+                    <div class="service-card w3-card-4">
+                        <div class="service-icon"><i class="fas fa-truck"></i></div>
+                        <h3>Servicio a Domicilio</h3>
+                        <p>Llevamos tus medicamentos hasta la puerta de tu casa sin costo adicional.</p>
+                    </div>
+                    
+                    <div class="service-card w3-card-4">
+                        <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Control de presión arterial</h3>
+                        <p>Ven y realiza tu control de forma gratuita en nuestro establecimiento.</p>
+                    </div>
+                    
+                    <div class="service-card w3-card-4">
+                        <div class="service-icon"><i class="fas fa-baby"></i></div>
+                        <h3>Productos para bebés</h3>
+                        <p>Todo lo que necesitas para el cuidado de los más pequeños de la casa.</p>
+                    </div>
+                    
+                    <div class="service-card w3-card-4">
+                        <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Productos Naturales</h3>
+                        <p>Alternativas naturales para el cuidado de tu salud y bienestar.</p>
+                    </div>
+                </div>
+                <div class="w3-center" style="margin-top: 2rem;">
+                    <a href="#contacto" class="btn">Contactar ahora</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Productos -->
+        <section id="productos" class="products">
+            <div class="container">
+                <h2 class="section-title">Productos Destacados</h2>
+                <div class="products-grid">
+                    <div class="product-card w3-card-4">
+                        <div class="product-image"><i class="fas fa-pills"></i></div>
+                        <div class="product-info">
+                            <h3>Multivitamínicos</h3>
+                            <p>Complejo vitamínico para fortalecer tu sistema inmunológico.</p>
+                            <p class="product-price">$18.99</p>
+                            <button class="btn w3-teal" onclick="addToCart('Multivitamínicos', 18.99, 'fas fa-pills')">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card w3-card-4">
+                        <div class="product-image"><i class="fas fa-thermometer-full"></i></div>
+                        <div class="product-info">
+                            <h3>Termómetro Digital</h3>
+                            <p>Precisión profesional para medir la temperatura de toda la familia.</p>
+                            <p class="product-price">$12.50</p>
+                            <button class="btn w3-teal" onclick="addToCart('Termómetro Digital', 12.50, 'fas fa-thermometer-full')">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card w3-card-4">
+                        <div class="product-image"><i class="fas fa-sun"></i></div>
+                        <div class="product-info">
+                            <h3>Protector Solar</h3>
+                            <p>Protección de amplio espectro para cuidar tu piel todo el año.</p>
+                            <p class="product-price">$15.75</p>
+                            <button class="btn w3-teal" onclick="addToCart('Protector Solar', 15.75, 'fas fa-sun')">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card w3-card-4">
+                        <div class="product-image"><i class="fas fa-first-aid"></i></div>
+                        <div class="product-info">
+                            <h3>Botiquín de Primeros Auxilios</h3>
+                            <p>Todo lo necesario para emergencias en casa o viajes.</p>
+                            <p class="product-price">$24.99</p>
+                            <button class="btn w3-teal" onclick="addToCart('Botiquín de Primeros Auxilios', 24.99, 'fas fa-first-aid')">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card w3-card-4">
+                        <div class="product-image"><i class="fas fa-head-side-mask"></i></div>
+                        <div class="product-info">
+                            <h3>Mascarillas de Protección</h3>
+                            <p>Paquete de 50 unidades. Alta eficiencia de filtrado.</p>
+                            <p class="product-price">$8.99</p>
+                            <button class="btn w3-teal" onclick="addToCart('Mascarillas de Protección', 8.99, 'fas fa-head-side-mask')">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card w3-card-4">
+                        <div class="product-image"><i class="fas fa-pump-soap"></i></div>
+                        <div class="product-info">
+                            <h3>Jabón Antibacterial</h3>
+                            <p>Elimina el 99.9% de gérmenes y bacterias. Presentación 500ml.</p>
+                            <p class="product-price">$5.25</p>
+                            <button class="btn w3-teal" onclick="addToCart('Jabón Antibacterial', 5.25, 'fas fa-pump-soap')">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ubicación -->
+        <section id="ubicacion" class="location">
+            <div class="container">
+                <h2 class="section-title">Nuestra Ubicación</h2>
+                <p class="w3-center">Visítanos en nuestra sede principal, estamos para servirte</p>
+                <div class="map-container w3-card-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.158721526158!2d-66.9031849250197!3d10.480888089719087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59bd3507d375%3A0x6b6cd6977c3f4ff0!2sCaracas%2C%20Distrito%20Capital!5e0!3m2!1ses!2sve!4v1689884718904!5m2!1ses!2sve" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Preguntas Frecuentes -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="w3-center w3-large">Encuentra respuestas a las preguntas más comunes sobre nuestros servicios y productos</p>
+                
+                <div class="faq-list">
+                    <div class="faq-item w3-card-4">
+                        <div class="faq-question" onclick="toggleFaq(0)">
+                            <span>¿Necesito receta médica para todos los medicamentos?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, solo para los medicamentos de venta bajo receta. Contamos con la mayoría de las aseguradoras médicas principales. Te recomendamos contactarnos con los detalles de tu seguro para confirmar la cobertura y los copagos aplicables.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item w3-card-4">
+                        <div class="faq-question" onclick="toggleFaq(1)">
+                            <span>¿Realizan entregas a domicilio?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, ofrecemos servicio de entrega a domicilio sin costo adicional en un radio de 5km. Para áreas más alejadas, aplica un pequeño cargo de envío. Los pedidos realizados antes de las 3pm se entregan el mismo día.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item w3-card-4">
+                        <div class="faq-question" onclick="toggleFaq(2)">
+                            <span>¿Aceptan seguros médicos?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, trabajamos con la mayoría de las aseguradoras médicas principales. Te recomendamos contactarnos con los detalles de tu seguro para confirmar la cobertura y los copagos aplicables.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item w3-card-4">
+                        <div class="faq-question" onclick="toggleFaq(3)">
+                            <span>¿Puedo pedir medicamentos que no tienen en stock?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, podemos encargar medicamentos especializados que no tengamos en stock habitual. Generalmente podemos obtenerlos en 24-48 horas. Contáctanos para confirmar disponibilidad y tiempo de entrega.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item w3-card-4">
+                        <div class="faq-question" onclick="toggleFaq(4)">
+                            <span>¿Ofrecen asesoramiento sobre medicamentos?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutamente. Nuestros farmacéuticos están disponibles para brindarte asesoramiento profesional sobre el uso adecuado de medicamentos, interacciones, efectos secundarios y cualquier duda que puedas tener sobre tu tratamiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-center" style="margin-top: 2rem;">
+                    <a href="#contacto" class="btn">Contactar ahora</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contacto -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-grid">
+                    <div class="contact-info w3-card-4">
+                        <h3>Información de Contacto</h3>
+                        <div class="contact-details">
+                            <p><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> Av. de la Salud 123, Ciudad</p>
+                            <p><span class="contact-icon"><i class="fas fa-phone"></i></span> 58 412 034 8988</p>
+                            <p><span class="contact-icon"><i class="fas fa-envelope"></i></span> info@farmaciasalud.com</p>
+                            <p><span class="contact-icon"><i class="fas fa-clock"></i></span> Lunes a Sábado: 8:00 - 22:00<br>Domingos: 9:00 - 14:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form w3-card-4">
+                        <h3>Envíanos un mensaje</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" required class="w3-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required class="w3-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" class="w3-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" required class="w3-input"></textarea>
+                            </div>
+                            
+                            <button type="button" class="btn w3-teal" onclick="enviarFormularioContacto()">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">Farmacia Salud</div>
+                    <p>Tu bienestar es nuestra prioridad. Servicio farmacéutico profesional con calidez humana.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Enlaces rápidos</h3>
+                    <div class="footer-links">
+                        <a href="#nosotros">Nosotros</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#productos">Productos</a>
+                        <a href="#ubicacion">Ubicación</a>
+                        <a href="#contacto">Contacto</a>
+                        <a href="#faq">Preguntas Frecuentes</a>
+                        <a href="carrito.html">Carrito</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Suscríbete a nuestro newsletter</h3>
+                    <p>Recibe consejos de salud y promociones exclusivas.</p>
+                    <form id="newsletterForm">
+                        <div class="form-group">
+                            <input type="email" id="newsletterEmail" placeholder="Tu email" required class="w3-input">
+                        </div>
+                        <button type="button" class="btn w3-teal" onclick="suscribirNewsletter()">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Farmacia Salud. Todos los derechos reservados.</p>
+                <p class="developer">Desarrollado por Yampiero Mujica - WEBZONA</p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
